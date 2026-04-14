@@ -29,11 +29,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 lg:px-8">
         <a href="#" className="flex items-center gap-2">
-          <span className="font-serif text-2xl font-bold text-primary-foreground tracking-tight">
-            KEEPERS
-          </span>
+          <img
+            src="/logo.png"
+            alt="Keepers Logo"
+            className="h-16 w-auto"
+          />
+
           <span className="hidden sm:inline text-primary-foreground/70 text-xs tracking-[0.3em] uppercase font-sans">
-            Financial Services
+            Keepers Financial Services
           </span>
         </a>
 
@@ -48,7 +51,7 @@ const Navbar = () => {
               {l.label}
             </a>
           ))}
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+          <a href="https://calendly.com/nilaskeepers/30min" target="_blank" rel="noopener noreferrer">
             <Button variant="gold" size="default" className="ml-2">
               <Phone className="w-4 h-4 mr-1" />
               Book a Consultation
@@ -80,7 +83,7 @@ const Navbar = () => {
                 {l.label}
               </a>
             ))}
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">
+            <a href="https://calendly.com/nilaskeepers/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="gold" className="w-full mt-2">
                 <Phone className="w-4 h-4 mr-1" />
                 Book a Consultation
