@@ -32,7 +32,7 @@ const HeroSection = () => {
           </p>
 
           <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">
-            <a href="#contact">
+            <a href="https://calendly.com/nilaskeepers/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="hero" size="lg" className="gap-2">
                 Book a Free Consultation
                 <ArrowRight className="w-4 h-4" />
