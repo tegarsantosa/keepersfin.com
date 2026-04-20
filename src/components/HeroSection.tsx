@@ -26,9 +26,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="animate-fade-in-up animation-delay-400 text-lg text-primary-foreground/75 leading-relaxed mb-10 max-w-xl font-sans">
-            From company incorporation to tax compliance, we empower
-            entrepreneurs and foreign investors to build and scale in Indonesia
-            — with clarity, precision, and peace of mind.
+            Let our expert team do the financial drone-work, so you can concentrate on making the honey.
           </p>
 
           <div className="animate-fade-in-up animation-delay-600 flex flex-col sm:flex-row gap-4">

@@ -6,16 +6,6 @@ const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast({ title: "Please fill in all required fields.", variant: "destructive" });
-      return;
-    }
-    toast({ title: "Thank you!", description: "We'll get back to you within 24 hours." });
-    setForm({ name: "", email: "", phone: "", message: "" });
-  };
-
   return (
     <section id="contact" className="py-24 lg:py-32 bg-surface-elevated">
   <div className="container mx-auto px-4 lg:px-8">
@@ -56,7 +46,7 @@ const ContactSection = () => {
         </div>
         <div>
           <h4 className="font-semibold text-sm font-sans mb-1 text-foreground">Phone</h4>
-          <a href="tel:+6281529251463" className="text-muted-foreground text-sm font-sans hover:text-gold transition-colors">
+          <a href="https://wa.me/6281529251463" className="text-muted-foreground text-sm font-sans hover:text-gold transition-colors">
             +62 815 2925 1463
           </a>
         </div>
@@ -75,20 +65,20 @@ const ContactSection = () => {
         </div>
       </div>
 
-      {/* WhatsApp */}
+      {/* LinkedIn */}
       <div className="flex items-start gap-4">
         <div className="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center flex-shrink-0">
           <MessageCircle className="w-5 h-5 text-gold" />
         </div>
         <div>
-          <h4 className="font-semibold text-sm font-sans mb-1 text-foreground">WhatsApp</h4>
+          <h4 className="font-semibold text-sm font-sans mb-1 text-foreground">LinkedIn</h4>
           <a
-            href="https://wa.me/6281529251463"
+            href="https://www.linkedin.com/company/keepers-financial-servicess/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground text-sm font-sans hover:text-gold transition-colors"
           >
-            Chat with us on WhatsApp
+            Connect with us on LinkedIn
           </a>
         </div>
       </div>
