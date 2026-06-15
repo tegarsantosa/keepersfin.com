@@ -18,10 +18,10 @@ const Footer = () => {
               Quick Links
             </h4>
             <div className="flex flex-col gap-2">
-              {["About", "Services", "Testimonials", "Contact"].map((l) => (
+              {["About", "Services", "Blog", "Testimonials", "Contact"].map((l) => (
                 <a
                   key={l}
-                  href={`#${l.toLowerCase()}`}
+                  href={l === "Blog" ? "/blog" : `#${l.toLowerCase()}`}
                   className="text-surface-dark-foreground/50 text-sm font-sans hover:text-gold transition-colors"
                 >
                   {l}

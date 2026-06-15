@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 
@@ -6,12 +7,15 @@ const navLinks = [
   { label: "Services", href: "#services" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -22,13 +26,15 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-primary/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-5"
+        isHomePage
+          ? scrolled
+            ? "bg-primary/95 backdrop-blur-md shadow-lg py-3"
+            : "bg-transparent py-5"
+          : "bg-primary/95 backdrop-blur-md shadow-lg py-3"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4 lg:px-8">
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img
             src="/logo.png"
             alt="Keepers Logo"
